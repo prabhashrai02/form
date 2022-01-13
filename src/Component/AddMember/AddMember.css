@@ -5,10 +5,17 @@
 }
 
 .form_input label {
-    font-size: x-large;
+    font-size: large;
     color: white;
+    padding: 10px;
+}
+
+.form_input input {
+    font-size: large;
+    padding: 10px;
 }
 
 .form_input button {
+    margin: 10px;
     cursor: pointer;
 }
