@@ -1,5 +1,6 @@
 import './AddMember.css';
 import Card from '../Card/Card';
+import Button from '../Button/Button';
 
 const AddMember = () => {
     return (
@@ -9,7 +10,7 @@ const AddMember = () => {
                 <input type='text' placeholder='Eg. Prabhash Rai'></input>
                 <label>Enter Your Age</label>
                 <input type='number' placeholder='Eg. 21'></input>
-                <button type='submit'>Add User</button>
+                <Button type='submit'>Add User</Button>
             </form>
         </Card>
     )
