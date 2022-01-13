@@ -1,11 +1,14 @@
 .form_input {
-    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: fit-content;
 }
 
 .form_input label {
     font-size: x-large;
     color: white;
+}
+
+.form_input button {
+    cursor: pointer;
 }
