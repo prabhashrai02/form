@@ -45,32 +45,34 @@ const AddMember = (props) => {
     }
 
     return (
-        <Card className='input'>
+        <div>
             {error && <ErrorModel head={error.title} message={error.message} onClick={ErrorController}/>}
-            <form className="form_input" 
-            onSubmit={AddUserHandler}>
-                <label>Enter Your Name</label>
-               
-                <input type='text' 
-                id='username' 
-                placeholder='Eg. Prabhash Rai'
-                value={enteredUsername}
-                onChange={ChangeUsername}
-                ></input>
+            <Card className='input'>
+                <form className="form_input" 
+                onSubmit={AddUserHandler}>
+                    <label htmlFor="username">Enter Your Name</label>
                 
-                <label>Enter Your Age</label>
-                
-                <input type='number' 
-                id='age' 
-                placeholder='Eg. 21'
-                onChange={ChangeAge}
-                value={enteredAge}
-                ></input>
-                
-                <Button type='submit' 
-                >Add User</Button>
-            </form>
-        </Card>
+                    <input type='text' 
+                    id='username' 
+                    placeholder='Eg. Prabhash Rai'
+                    value={enteredUsername}
+                    onChange={ChangeUsername}
+                    ></input>
+                    
+                    <label htmlFor="age">Enter Your Age</label>
+                    
+                    <input type='number' 
+                    id='age' 
+                    placeholder='Eg. 21'
+                    onChange={ChangeAge}
+                    value={enteredAge}
+                    ></input>
+                    
+                    <Button type='submit' 
+                    >Add User</Button>
+                </form>
+            </Card>
+        </div>
     )
 }
 
