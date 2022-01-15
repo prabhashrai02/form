@@ -11,9 +11,9 @@ const ErrorModel = (props) => {
                     <h2>{props.head}</h2>
                 </header>
                 
-                <body className='content'>
-                    <p>{props.message}</p>
-                </body>
+                {/* <body className='content'> */}
+                    <p className='content'>{props.message}</p>
+                {/* </body> */}
 
                 <footer className='actions'>
                     <Button onClick={props.onClick}>

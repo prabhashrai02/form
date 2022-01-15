@@ -4,10 +4,12 @@ import Card from '../Card/Card';
 const MembersList = (props) => {
 
     return (
-        <Card>
+        <Card className="users">
             <ul>
                 {props.users.map(user =>(
-                    <li>{user.name} is {user.age} years old.</li>
+                    <li key={user.id}>
+                        {user.name} is {user.age} years old.
+                    </li>
                 ))}
             </ul>
         </Card>
