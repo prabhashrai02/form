@@ -45,7 +45,7 @@ const AddMember = (props) => {
     }
 
     return (
-        <Card>
+        <Card className='input'>
             {error && <ErrorModel head={error.title} message={error.message} onClick={ErrorController}/>}
             <form className="form_input" 
             onSubmit={AddUserHandler}>
