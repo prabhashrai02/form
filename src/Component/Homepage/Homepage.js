@@ -18,10 +18,12 @@ const Homepage = () => {
     };
 
     return (
-        <div className="Homepage">
-            <AddMember onadduser= {addUserHandler}/>
-            <br></br>
-            <MembersList users={adddata} />
+        <div>
+            <div className="Homepage">
+                <AddMember onadduser= {addUserHandler}/>
+                <br></br>
+                <MembersList users={adddata} />
+            </div>
         </div>
     )
 }

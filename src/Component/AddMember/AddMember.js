@@ -1,17 +1,22 @@
 import React, {useState} from 'react';
-
 import './AddMember.css';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
+import ErrorModel from '../ErrorModel/ErrorModel';
 
 const AddMember = (props) => {
     const [enteredUsername, setenteredUsername] = useState('');
     const [enteredAge, setenteredAge] = useState('');
+    const [error, setError] = useState();
 
     const AddUserHandler = (event) => {
         event.preventDefault();
 
         if(enteredUsername.trim().length === 0 || +enteredAge < 1){
+            setError({
+                title: 'Invalid input',
+                message: 'Please enter valid input!!!',
+            });
             return;
         }
 
@@ -35,8 +40,13 @@ const AddMember = (props) => {
         setenteredAge(event.target.value);
     }    
 
+    const ErrorController = () => {
+        setError(null);
+    }
+
     return (
         <Card>
+            {error && <ErrorModel head={error.title} message={error.message} onClick={ErrorController}/>}
             <form className="form_input" 
             onSubmit={AddUserHandler}>
                 <label>Enter Your Name</label>
