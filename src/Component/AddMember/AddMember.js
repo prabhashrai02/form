@@ -4,7 +4,7 @@ import './AddMember.css';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
 
-const AddMember = () => {
+const AddMember = (props) => {
     const [enteredUsername, setenteredUsername] = useState('');
     const [enteredAge, setenteredAge] = useState('');
 
@@ -15,9 +15,16 @@ const AddMember = () => {
             return;
         }
 
+        const data = {
+            name: enteredUsername,
+            age: enteredAge,
+        }
+
         setenteredAge('');
         setenteredUsername('');
-        console.log(enteredUsername, enteredAge);
+        
+        // console.log(data);
+        props.onadduser(data);
     } 
 
     const ChangeUsername = (event) => {
