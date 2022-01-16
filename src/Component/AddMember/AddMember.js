@@ -48,8 +48,7 @@ const AddMember = (props) => {
         <div>
             {error && <ErrorModel head={error.title} message={error.message} onClick={ErrorController}/>}
             <Card className='input'>
-                <form className="form_input" 
-                onSubmit={AddUserHandler}>
+                <form onSubmit={AddUserHandler}>
                     <label htmlFor="username">Enter Your Name</label>
                 
                     <input type='text' 

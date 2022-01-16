@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import Card from '../Card/Card';
-// import './ErrorModel.css';
+import './ErrorModel.css';
 
 const ErrorModel = (props) => {
     return(
@@ -10,11 +10,9 @@ const ErrorModel = (props) => {
                 <header className='header'>
                     <h2>{props.head}</h2>
                 </header>
-                
-                {/* <body className='content'> */}
-                    <p className='content'>{props.message}</p>
-                {/* </body> */}
-
+                <div className='content'>
+                    <p>{props.message}</p>
+                </div>
                 <footer className='actions'>
                     <Button onClick={props.onClick}>
                         Okay
