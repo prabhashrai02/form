@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import AddMember from '../AddMember/AddMember';
 import MembersList from '../MembersList/MembersList';
-import Wrapper from '../Wrapper/Wrapper';
 import './Homepage.css';
 
 const Homepage = () => {
@@ -19,13 +18,13 @@ const Homepage = () => {
     };
 
     return (
-        <Wrapper>
+        <React.Fragment>
             <div className="Homepage">
                 <AddMember onadduser= {addUserHandler}/>
                 <br></br>
                 <MembersList users={adddata} />
             </div>
-        </Wrapper>
+        </React.Fragment>
     )
 }
 

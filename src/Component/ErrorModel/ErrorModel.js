@@ -1,12 +1,11 @@
 import Button from '../Button/Button';
 import Card from '../Card/Card';
 import './ErrorModel.css';
-import Wrapper from '../Wrapper/Wrapper';
-
+import React from 'react';
 
 const ErrorModel = (props) => {
     return(
-        <Wrapper>
+        <React.Fragment>
             <div className='backdrop' />
             <Card className='modal'>
                 <header className='header'>
@@ -21,7 +20,7 @@ const ErrorModel = (props) => {
                     </Button>
                 </footer>
             </Card>
-        </Wrapper>
+        </React.Fragment>
     )
 }
 
